@@ -814,7 +814,10 @@ input {
   color: #333333;
 }
 
-.health__list-item--color:nth-child(1),
+.health__list-item--color:nth-child(1) {
+  background-color: #ffeaf6;
+}
+
 .health__list-item--color:nth-child(2) {
   background: #f0e8fd;
 }
@@ -846,21 +849,66 @@ input {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: top;
-  -ms-flex-align: top;
-  align-items: top;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   gap: 30px;
-  padding-top: 170px;
-  padding-bottom: 170px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cases__list--icons {
+  position: relative;
+}
+
+.cases__list--icons::before {
+  position: absolute;
+  top: 10%;
+  right: 33%;
+  -webkit-transform: translate(-33%, -10%);
+  transform: translate(-33%, -10%);
+  display: block;
+  content: "";
+  width: 33px;
+  height: 46px;
+  background-image: url("../img/star.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cases__list--icons::after {
+  position: absolute;
+  bottom: 5%;
+  left: 35%;
+  -webkit-transform: translate(-35%, -5%);
+  transform: translate(-35%, -5%);
+  display: block;
+  content: "";
+  width: 44px;
+  height: 61px;
+  background-image: url("../img/star.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .cases__list-item {
-  max-width: 370px;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   text-align: center;
+  border-radius: 50%;
+  border: 20px solid #f6f6f6;
 }
 .cases__list-item span {
   display: inline-block;
@@ -873,12 +921,43 @@ input {
   color: #333333;
 }
 
-.cases__list-item:nth-child(4) span {
-  width: 230px;
+.cases__list-item:nth-child(1),
+.cases__list-item:nth-child(3) {
+  max-width: 392px;
+  width: 100%;
+  height: 392px;
 }
 
-.cases__list-item:nth-child(5) span {
-  width: 270px;
+.cases__list-item:nth-child(2) {
+  max-width: 240px;
+  width: 100%;
+  height: 240px;
+}
+
+.cases__list-item--icon {
+  position: relative;
+}
+
+.cases__list-item--icon::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  content: "";
+  width: 127px;
+  height: 176px;
+  background-image: url("../img/star.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cases__list-item--icon:nth-child(1).cases__list-item--icon::before,
+.cases__list-item--icon:nth-child(3).cases__list-item--icon::before {
+  width: 207px;
+  height: 288px;
 }
 .reproductive {
   padding-top: 50px;
@@ -914,7 +993,7 @@ input {
   margin: 0 auto;
 }
 .program {
-  padding-top: 125px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -940,7 +1019,7 @@ input {
   width: 50%;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  background-color: #f1eafd;
+  background-color: #ffe5f2;
 }
 
 .program__inner {
@@ -1099,10 +1178,6 @@ input {
     padding-top: 25px;
     padding-bottom: 25px;
   }
-  .cases__list {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
   .reproductive {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -1239,28 +1314,18 @@ input {
     width: 36px;
   }
   .cases__list {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-  .cases__list-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
   }
   .cases__list-item span {
     text-align: center;
+  }
+  .cases__list--icons::after {
+    bottom: 5%;
+    left: 20%;
+    -webkit-transform: translate(-20%, -5%);
+    transform: translate(-20%, -5%);
   }
   .program {
     padding-top: 0px;
