@@ -1241,6 +1241,8 @@ input {
   .cases__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
   .cases__list-item {
     display: -webkit-box;
@@ -1260,9 +1262,26 @@ input {
   .cases__list-item span {
     text-align: center;
   }
+  .program {
+    padding-top: 0px;
+    padding-bottom: 25px;
+  }
   .program__column-left,
   .program__column-right {
-    padding: 0;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  .program-list-action__item {
+    font-size: 18px;
+  }
+  .program-list-action {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  .program__column-right .program-list-action {
+    padding-left: 25px;
   }
 }
 @media (max-width: 578px){
