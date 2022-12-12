@@ -458,7 +458,8 @@ input {
 }
 
 .btn-sign-up {
-  padding: 12px 48px;
+  max-width: 405px;
+  padding: 14px 32px;
   background-color: var(--color-primary);
   border: 2px solid transparent;
   border-radius: 30px;
@@ -628,6 +629,7 @@ input {
   color: #f178b6;
   margin-bottom: 22px;
   background-color: #fff;
+  border-radius: 10px;
 }
 
 .welcome__content-subtitle {
@@ -735,8 +737,8 @@ input {
   background-position: center;
   background-size: cover;
   position: absolute;
-  left: -7px;
-  top: -3px;
+  left: -6px;
+  top: 2px;
 }
 
 .popup_position {
@@ -919,6 +921,8 @@ input {
   line-height: 1.5;
   text-align: center;
   color: #333333;
+  position: relative;
+  z-index: 41;
 }
 
 .cases__list-item:nth-child(1),
@@ -993,7 +997,7 @@ input {
   margin: 0 auto;
 }
 .program {
-  padding-top: 50px;
+  padding-top: 65px;
   padding-bottom: 50px;
 }
 
@@ -1049,11 +1053,11 @@ input {
 }
 
 .program__column-left {
-  margin-top: 30px;
+  margin-top: 48px;
 }
 
 .program__column-right {
-  margin-top: 30px;
+  margin-top: 48px;
   margin-bottom: 30px;
   margin-left: 63px;
   width: 100%;
@@ -1128,7 +1132,7 @@ input {
 }
 
 .program__column-right .program-list-action {
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .promo-group__list-item {
